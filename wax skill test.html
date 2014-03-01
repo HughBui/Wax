@@ -1,5 +1,6 @@
 <html>
 <head>
+<!-- === CSS is embbed in the same file for convenience -->
 <style TYPE="text/css">
 #outsideDiv{
 	width: 425px; 
@@ -105,9 +106,15 @@
 }
 </style>
  
+ <!-- === Scripts to perform showing / hiding a div with animation -->
+ <!-- There are two divs: insideDiv and outsideDiv -->
+ <!-- The insideDiv contains the content, which is the embedded Google Map -->
+ <!-- The outsideDiv acts as a cover. This cover's height is modified for animation effect-->
 <script type="text/javascript">
 var currentHeight = 0;
 var action;
+
+<!-- showDiv function extend the cover's height gradually to the size of the content to show it -->
 function showDiv(){
      if(currentHeight == 350){
          clearInterval(action);
@@ -119,7 +126,8 @@ function showDiv(){
      div.style.height = currentHeight + 'px';
 
 }
-  
+
+<!-- hideDiv function collapse the cover's height gradually to 0px to hide the content -->  
 function hideDiv(){
      var div = document.getElementById("outsideDiv"); 
      if(currentHeight == 2){
@@ -134,6 +142,7 @@ function hideDiv(){
   
 }
 
+<!-- toggleDiv function detects the cover's visibility and decide whether to expend or collapse it -->
 function toggleDiv(){
 	var div = document.getElementById("outsideDiv");
 	if(currentHeight == 0){
@@ -181,9 +190,9 @@ function toggleDiv(){
 	<div class="gradient">Guaranteed! No images :)</div>
 	
 	<div class="body">
-		<p>This is the main body text area. I don't know what to write in here. This is the main body text area. I don't know what to write in here.This is the main body text area.</p>
-		<p>This is the main body text area. I don't know what to write in here. This is the main body text area. I don't know what to write in here.This is the main body text area.</p>
-		<p>This is the main body text area. I don't know what to write in here. This is the main body text area. I don't know what to write in here.This is the main body text area.</p>
+		<p>Thank you very much for your considerations. Thank you very much for your considerations. Thank you very much for your considerations. Thank you very much for your considerations.</p>
+		<p>Thank you very much for your considerations. Thank you very much for your considerations. Thank you very much for your considerations. Thank you very much for your considerations.</p>
+		<p>Thank you very much for your considerations. Thank you very much for your considerations. Thank you very much for your considerations. Thank you very much for your considerations.</p>
 	</div>
 
 </div>
